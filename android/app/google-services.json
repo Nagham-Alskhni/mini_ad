@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "172939410440",
+    "firebase_url": "https://mini-ad-cb1f9.firebaseio.com",
+    "project_id": "mini-ad-cb1f9",
+    "storage_bucket": "mini-ad-cb1f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172939410440:android:d4e777c745bff1313625bd",
+        "android_client_info": {
+          "package_name": "com.nagham.miniad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172939410440-5sam3d76m4ksgsj06hmvp5kdkr252jid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR9XDdfm6TErf27s9M0AQq8lfv7HRrzuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172939410440-5sam3d76m4ksgsj06hmvp5kdkr252jid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

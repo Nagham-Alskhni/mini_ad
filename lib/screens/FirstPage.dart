@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
@@ -36,6 +37,10 @@ class _FirstPageState extends State<FirstPage> {
     var fireStore = FirebaseFirestore.instance;
     QuerySnapshot qs = await fireStore.collection("Products").get();
     return qs.docs;
+  }
+
+  getData() async {
+    return await FirebaseFirestore.instance.collection("Products").get();
   }
 
   // what the below line do??
@@ -94,10 +99,15 @@ class _FirstPageState extends State<FirstPage> {
         },
       ),
       body: StreamBuilder(
-        stream:
-            FirebaseFirestore.instance.collection("Products").doc().snapshots(),
-        builder:
-            (BuildContext Context, AsyncSnapshot<DocumentSnapshot> snapshot) {
+        stream: FirebaseFirestore.instance.collection('Products').snapshots(),
+        builder: (BuildContext Context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          //
+          QuerySnapshot snap = snapshot.data;
+
+          List<DocumentSnapshot> documents = snap.docs;
+
+          //
+
           return Container(
             child: SingleChildScrollView(
               child: Column(
